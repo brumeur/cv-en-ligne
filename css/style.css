@@ -1,0 +1,336 @@
+/* CV en ligne - Feuille de style principale */
+/* Palette : #17abb3 teal, #333333 texte, #e3e3e3 gris, #f5f5f5 fond colonne, #ffffff fond */
+/* Polices : Lato (titres, Google Fonts) / Raleway (contenu, @font-face) */
+/* Mise en page : Flexbox, largeur 1160px centrée */
+
+/* Variables */
+:root {
+    --teal:    #17abb3;
+    --ink:     #333333;
+    --grey:    #e3e3e3;
+    --grey-lt: #f5f5f5;
+    --white:   #ffffff;
+    --cv-width: 1160px;
+}
+
+/* Reset léger */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* marges/bordures comprises dans largeurs/hauteurs */
+}
+
+html {
+    font-size: 100%; /* respecte la taille définie par l'utilisateur dans le navigateur */
+}
+
+body {
+    font-family: "Raleway", Arial, sans-serif;
+    color: var(--ink);
+    background-color: var(--grey);
+    line-height: 1.5;
+    padding: 2rem 1rem;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Conteneur CV */
+.cv {
+    width: 100%;
+    max-width: var(--cv-width); /* largeur 1160px */
+    margin: 0 auto;             /* centré dans le navigateur */
+    background-color: var(--white);
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.12);
+}
+
+/* En-tête */
+.cv__header {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    background-color: var(--teal);
+    color: var(--white);
+    padding: 2.25rem 3rem;
+}
+
+/* Photo de profil : arrondie, bordure, effet zoom au survol */
+.header__photo-link {
+    flex: 0 0 auto;
+    display: block;
+    cursor: zoom-in; /* effet n°2 : indique que l'on peut zoomer */
+}
+
+.header__photo {
+    display: block;
+    width: 8.75rem;
+    height: 8.75rem;
+    border-radius: 50%;                 /* arrondie */
+    border: 0.3rem solid var(--white);  /* bordure tout autour */
+    object-fit: cover;
+    transition: transform 0.25s ease;
+}
+
+.header__photo-link:hover .header__photo {
+    transform: scale(1.05);
+}
+
+.header__identity {
+    flex: 1 1 auto;              /* occupe l'espace restant à droite de la photo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;        /* centre nom, poste et coordonnées horizontalement */
+    text-align: center;
+    gap: 0.6rem;
+}
+
+.header__name {
+    font-family: "Lato", Arial, sans-serif;
+    font-weight: 900;
+    font-size: 2.75rem;
+    line-height: 1.1;
+}
+
+.header__job {
+    font-family: "Lato", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.15rem;
+}
+
+/* Coordonnées : grille 2 colonnes, bloc centré */
+.header__contact {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;    /* centre le bloc de coordonnées */
+    gap: 0.6rem 3rem;
+    margin-top: 0.5rem;
+}
+
+.contact__item {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-size: 0.9rem;
+}
+
+.contact__icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+.contact__item a:hover {
+    text-decoration: underline;
+}
+
+/* Corps */
+.cv__body {
+    display: flex;
+    align-items: stretch;
+}
+
+/* Colonne gauche */
+.cv__aside {
+    flex: 0 0 20rem;
+    background-color: var(--grey-lt);
+    padding: 2rem 2rem 2.5rem;
+}
+
+.aside__section {
+    margin-bottom: 2rem;
+}
+
+.aside__section:last-child {
+    margin-bottom: 0;
+}
+
+.aside__title {
+    font-family: "Lato", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: var(--teal);
+    padding-bottom: 0.4rem;
+    margin-bottom: 1rem;
+    border-bottom: 0.09rem solid var(--grey);
+}
+
+/* Compétences (label + étoiles) */
+.skills__item,
+.langs__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.55rem;
+    font-size: 0.9rem;
+}
+
+.skills__label {
+    font-weight: 700;
+}
+
+.stars {
+    letter-spacing: 0.1rem;
+    color: var(--grey);
+}
+
+.star--on {
+    color: var(--teal);
+}
+
+/* Langues */
+.langs__label {
+    font-weight: 700;
+}
+
+.langs__level {
+    color: var(--ink);
+    font-size: 0.85rem;
+}
+
+/* Listes à puces (qualités, outils) */
+.bullets__item {
+    position: relative;
+    padding-left: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.bullets__item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 0.45rem;
+    height: 0.45rem;
+    background-color: var(--teal);
+}
+
+/* Colonne droite */
+.cv__main {
+    flex: 1 1 auto;
+    padding: 2rem 2.5rem 2.5rem;
+}
+
+.main__section {
+    margin-bottom: 2rem;
+}
+
+.main__section:last-child {
+    margin-bottom: 0;
+}
+
+.main__title {
+    font-family: "Lato", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--teal);
+    padding-bottom: 0.4rem;
+    margin-bottom: 1.1rem;
+    border-bottom: 0.09rem solid var(--grey);
+}
+
+/* Profil : texte justifié + indentation 1re ligne */
+.profil__text {
+    text-align: justify;
+    text-indent: 2.5rem;
+}
+
+/* Timeline (formation, expériences, projets) */
+.timeline__item {
+    padding: 0.75rem 0.9rem;
+    border-left: 0.25rem solid transparent; /* trait vertical (masqué au repos) */
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Effet n°1 : au survol, trait vertical teal + fond gris clair */
+.timeline__item:hover {
+    background-color: var(--grey-lt);
+    border-left-color: var(--teal);
+}
+
+.timeline__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+.timeline__role {
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.timeline__place {
+    font-style: italic;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.timeline__date {
+    color: var(--teal);
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+/* Pied de page */
+.cv__footer {
+    background-color: var(--teal);
+    color: var(--white);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.footer__socials {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* Effet n°3 : au survol d'une icône réseau, l'opacité réduit légèrement */
+.footer__socials a {
+    display: block;
+    transition: opacity 0.2s ease;
+}
+
+.footer__socials a:hover {
+    opacity: 0.7;
+}
+
+.footer__icon {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.footer__update {
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+    .cv__header {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1.5rem;
+    }
+
+    .header__contact {
+        justify-content: center;
+        max-width: none;
+    }
+
+    .cv__body {
+        flex-direction: column;
+    }
+
+    .cv__aside {
+        flex-basis: auto;
+    }
+}
