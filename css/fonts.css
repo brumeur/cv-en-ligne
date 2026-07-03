@@ -1,0 +1,33 @@
+/* Import de la police Raleway (contenu) via @font-face */
+/* Placez les fichiers .woff2 / .woff / .ttf dans assets/fonts/ */
+/* Lato (titres) est importé via Google Fonts dans le <head> */
+
+@font-face {
+    font-family: "Raleway";
+    src: url("../assets/fonts/Raleway-Regular.woff2") format("woff2"),
+         url("../assets/fonts/Raleway-Regular.woff")  format("woff"),
+         url("../assets/fonts/Raleway-Regular.ttf")   format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Raleway";
+    src: url("../assets/fonts/Raleway-Bold.woff2") format("woff2"),
+         url("../assets/fonts/Raleway-Bold.woff")  format("woff"),
+         url("../assets/fonts/Raleway-Bold.ttf")   format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Raleway";
+    src: url("../assets/fonts/Raleway-Italic.woff2") format("woff2"),
+         url("../assets/fonts/Raleway-Italic.woff")  format("woff"),
+         url("../assets/fonts/Raleway-Italic.ttf")   format("truetype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
