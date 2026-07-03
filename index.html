@@ -1,1 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Référencement SEO -->
+    <title>Alex Martin — Développeur Web et Web Mobile | CV en ligne</title>
+    <meta name="description" content="CV en ligne de Alex Martin, en formation Développeur Web Full Stack. Support informatique et technique, compétences HTML, CSS, Lua, Git.">
+    <meta name="author" content="Alex Martin">
+    <meta name="keywords" content="développeur web, full stack, support informatique, HTML, CSS, Lua, Git, CV en ligne">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Alex Martin — Développeur Web et Web Mobile">
+    <meta property="og:description" content="CV en ligne : support informatique et technique, en formation Développeur Web Full Stack.">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+    <!-- Police Lato importée via Google Fonts (titres) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+
+    <!-- Feuilles de style (séparées) -->
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Conteneur principal : porte la largeur (1160px) et le centrage -->
+    <div class="cv">
+
+        <!-- En-tête -->
+        <header class="cv__header">
+            <a class="header__photo-link" href="assets/img/profil.jpg" target="_blank" rel="noopener" title="Cliquez pour agrandir la photo">
+                <img class="header__photo" src="assets/img/profil.jpg" alt="Photo de profil de Alex Martin">
+            </a>
+
+            <div class="header__identity">
+                <h1 class="header__name">Alex Martin</h1>
+                <p class="header__job">Développeur Web et Web Mobile</p>
+
+                <!-- Coordonnées -->
+                <ul class="header__contact">
+                    <li class="contact__item">
+                        <img class="contact__icon" src="assets/icons/mail.svg" alt="">
+                        <a href="mailto:alex.martin@example.com">Mail</a>
+                    </li>
+                    <li class="contact__item">
+                        <img class="contact__icon" src="assets/icons/home.svg" alt="">
+                        <a href="https://www.google.com/maps/search/?api=1&query=12+rue+des+Lilas+75011+Paris" target="_blank" rel="noopener">Adresse</a>
+                    </li>
+                    <li class="contact__item">
+                        <img class="contact__icon" src="assets/icons/phone.svg" alt="">
+                        <a href="tel:+33612345678">Téléphone</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- Contenu principal -->
+        <main class="cv__body">
+
+            <!-- Colonne latérale gauche -->
+            <aside class="cv__aside">
+
+                <!-- Compétences -->
+                <section class="aside__section">
+                    <h2 class="aside__title">Compétences</h2>
+                    <ul class="skills">
+                        <li class="skills__item">
+                            <span class="skills__label">HTML</span>
+                            <span class="stars" aria-label="4 étoiles sur 5">
+                                <span class="star star--on">★</span><span class="star star--on">★</span><span class="star star--on">★</span><span class="star star--on">★</span><span class="star">★</span>
+                            </span>
+                        </li>
+                        <li class="skills__item">
+                            <span class="skills__label">CSS</span>
+                            <span class="stars" aria-label="4 étoiles sur 5">
+                                <span class="star star--on">★</span><span class="star star--on">★</span><span class="star star--on">★</span><span class="star star--on">★</span><span class="star">★</span>
+                            </span>
+                        </li>
+                        <li class="skills__item">
+                            <span class="skills__label">Javascript</span>
+                            <span class="stars" aria-label="2 étoiles sur 5">
+                                <span class="star star--on">★</span><span class="star star--on">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                            </span>
+                        </li>
+                        <li class="skills__item">
+                            <span class="skills__label">PHP</span>
+                            <span class="stars" aria-label="1 étoile sur 5">
+                                <span class="star star--on">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                            </span>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Langues -->
+                <section class="aside__section">
+                    <h2 class="aside__title">Langues</h2>
+                    <ul class="langs">
+                        <li class="langs__item">
+                            <span class="langs__label">Français</span>
+                            <span class="langs__level">Langue maternelle</span>
+                        </li>
+                        <li class="langs__item">
+                            <span class="langs__label">Anglais</span>
+                            <span class="langs__level">Professionnel</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Qualités -->
+                <section class="aside__section">
+                    <h2 class="aside__title">Qualités</h2>
+                    <ul class="bullets">
+                        <li class="bullets__item">Esprit d'équipe</li>
+                        <li class="bullets__item">Autonomie</li>
+                        <li class="bullets__item">Organisation</li>
+                        <li class="bullets__item">Créativité</li>
+                    </ul>
+                </section>
+
+                <!-- Centres d'intérêt -->
+                <section class="aside__section">
+                    <h2 class="aside__title">Centres d'intérêt</h2>
+                    <ul class="bullets">
+                        <li class="bullets__item">Création de jeux roblox</li>
+                        <li class="bullets__item">Musculation</li>
+                    </ul>
+                </section>
+
+            </aside>
+
+            <!-- Colonne principale droite -->
+            <div class="cv__main">
+
+                <!-- Profil -->
+                <section class="main__section">
+                    <h2 class="main__title">Profil</h2>
+                    <p class="profil__text">
+                        Étudiant en formation Développeur Web, je recherche un poste au sein du
+                        service informatique et technique d'un magasin Intermarché. À l'aise avec
+                        les outils numériques, la résolution de problèmes et la gestion de données,
+                        je dispose de plusieurs expériences en administration et en gestion au sein
+                        de structures publiques et privées. Sérieux, autonome et polyvalent, je
+                        souhaite mettre mes compétences techniques et mon sens de l'organisation au
+                        service du fonctionnement quotidien du magasin.
+                    </p>
+                </section>
+
+                <!-- Formation -->
+                <section class="main__section">
+                    <h2 class="main__title">Formation</h2>
+                    <ul class="timeline">
+                        <li class="timeline__item">
+                            <div class="timeline__head">
+                                <div>
+                                    <p class="timeline__role">Développeur Web Full Stack</p>
+                                    <p class="timeline__place">Centre Européen de Formation</p>
+                                </div>
+                                <time class="timeline__date" datetime="2026">2026 - 2029</time>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Stages -->
+                <section class="main__section">
+                    <h2 class="main__title">Stages</h2>
+                    <ul class="timeline">
+                        <li class="timeline__item">
+                            <div class="timeline__head">
+                                <div>
+                                    <p class="timeline__role">Gestion et administration — Europ'Metal</p>
+                                    <p class="timeline__place">Distribution d'équipements pour magasins</p>
+                                </div>
+                                <time class="timeline__date" datetime="2023">2023 - 2024</time>
+                            </div>
+                        </li>
+                        <li class="timeline__item">
+                            <div class="timeline__head">
+                                <div>
+                                    <p class="timeline__role">Gestion des budgets de cantine — Lycée Léonard de Vinci</p>
+                                    <p class="timeline__place">Restauration scolaire</p>
+                                </div>
+                                <time class="timeline__date" datetime="2021">2021 - 2022</time>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Expériences professionnelles -->
+                <section class="main__section">
+                    <h2 class="main__title">Expériences professionnelles</h2>
+                    <ul class="timeline">
+                        <li class="timeline__item">
+                            <div class="timeline__head">
+                                <div>
+                                    <p class="timeline__role">Administration — Mairie</p>
+                                    <p class="timeline__place">Services municipaux</p>
+                                </div>
+                                <time class="timeline__date" datetime="2022">2022 - 2023</time>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+            </div>
+        </main>
+
+        <!-- Pied de page -->
+        <footer class="cv__footer">
+            <ul class="footer__socials">
+                <li>
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <img class="footer__icon" src="assets/icons/linkedin.svg" alt="LinkedIn">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/alexmartin-dev" target="_blank" rel="noopener" aria-label="GitHub">
+                        <img class="footer__icon" src="assets/icons/github.svg" alt="GitHub">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+                        <img class="footer__icon" src="assets/icons/instagram.svg" alt="Instagram">
+                    </a>
+                </li>
+            </ul>
+            <p class="footer__update">Mis à jour le : <time datetime="2026-07-03">03/07/2026</time></p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
